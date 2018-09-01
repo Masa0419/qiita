@@ -56,7 +56,7 @@ Qiitaは、プログラミングに関する知識を記録・共有するため
 - has_many :ariticle_images
 - has_many :likes, dependent: :destroy
 - has_many :comments, dependent: :destroy
-- has_many :tags, through: :tag_notes
+- has_many :tags, through: :ariticle_tag
 
 
 
