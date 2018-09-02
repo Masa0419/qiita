@@ -60,11 +60,6 @@ Qiitaは、プログラミングに関する知識を記録・共有するため
 
 
 
-
-### Associations
-- belongs_to :aritcle
-
-
 ## ariticle_images table
 
 |Column|Type|Options|
