@@ -1,0 +1,53 @@
+=render"header"
+.nl-Hero
+  .nl-Hero_inner
+    .nl-Hero_start
+      %h1.mb-3.nl-Hero_title Hello hackers !
+      %p.nl-Hero_lead Qiitaは、エンジニアリングに関する知識を記録・共有するためのサービスです。コードを書いていて気づいたことや、自分がハマったあの仕様について、他のエンジニアと知見を共有しましょう ;)
+    .nl-Hero_end
+      .nl-SocialSignupWrapper
+        %a.nl-SocialSignup.nl-SocialSignup-github{:href => "https://oauth.qiita.com/auth/github?callback_action=login_or_signup&realm=qiita"}
+          %span.fa.fa-github>
+          GitHub
+        %a.nl-SocialSignup.nl-SocialSignup-twitter{:href => "https://oauth.qiita.com/auth/twitter?callback_action=login_or_signup&realm=qiita"}
+          %span.fa.fa-twitter>
+          Twitter
+        %a.nl-SocialSignup.nl-SocialSignup-google{:href => "https://oauth.qiita.com/auth/google?callback_action=login_or_signup&realm=qiita"}
+          %span.fa.fa-google>
+          Google
+      .nl-Hero_separator OR
+      %form.nl-SignupForm{"accept-charset" => "UTF-8", :action => "/registration", :method => "post"}
+        %input{:name => "utf8", :type => "hidden", :value => "✓"}/
+        %input{:name => "authenticity_token", :type => "hidden", :value => "+BxXI5CnRYSsnkyPiVlBJ9Z/9RkwggykbCGEQEu2njs+96B0StlI6BT2em6q0CxJ3MBt+xuU7SnqWzYXMwo87Q=="}/
+        .mb-2.nl-SignupForm_group
+          %label.nl-SignupForm_label{:for => "url_name"} ユーザ名
+          %input#url_name.nl-SignupForm_input{:name => "user[url_name]", :placeholder => "qiitan", :type => "text"}/
+        .mb-2.nl-SignupForm_group
+          %label.nl-SignupForm_label{:for => "email"} メールアドレス
+          %input#email.nl-SignupForm_input{:name => "user[email]", :placeholder => "qiitan@qiita.com", :type => "email"}/
+        .mb-1.nl-SignupForm_group
+          %label.nl-SignupForm_label{:for => "password"} パスワード
+          %input#password.nl-SignupForm_input{:name => "user[password]", :placeholder => "********", :type => "password"}/
+        %span.mb-2.nl-SignupForm_helpText 8文字以上、英・数・記号が使えます
+        %script{:async => "async", :defer => "defer", :src => "https://www.google.com/recaptcha/api.js"}
+        .nl-SignupForm_recaptcha
+          %script{:async => "", :defer => "defer", :src => "https://www.google.com/recaptcha/api.js"}
+          .g-recaptcha{"data-sitekey" => "6LfNkiQTAAAAAM3UGnSquBy2akTITGNMO_QDxMw6"}
+            %div{:style => "width: 304px; height: 78px;"}
+              %div
+                %iframe{:frameborder => "0", :height => "78", :name => "a-cy3rvvpsi130", :role => "presentation", :sandbox => "allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox", :scrolling => "no", :src => "https://www.google.com/recaptcha/api2/anchor?ar=1&k=6LfNkiQTAAAAAM3UGnSquBy2akTITGNMO_QDxMw6&co=aHR0cHM6Ly9xaWl0YS5jb206NDQz&hl=ja&v=v1535045166622&size=normal&cb=87ubj1j6rcuj", :width => "304"}
+              %textarea#g-recaptcha-response.g-recaptcha-response{:name => "g-recaptcha-response", :style => "width: 250px; height: 40px; border: 1px solid #c1c1c1; margin: 10px 25px; padding: 0px; resize: none;  display: none; "}
+          %noscript
+            %div
+              %div{:style => "width: 302px; height: 422px; position: relative;"}
+                %div{:style => "width: 302px; height: 422px; position: absolute;"}
+                  %iframe{:frameborder => "0", :scrolling => "no", :src => "https://www.google.com/recaptcha/api/fallback?k=6LfNkiQTAAAAAM3UGnSquBy2akTITGNMO_QDxMw6", :style => "width: 302px; height:422px; border-style: none;"}
+              %div{:style => "width: 300px; height: 60px; border-style: none;\r\n                bottom: 12px; left: 25px; margin: 0px; padding: 0px; right: 25px;\r\n                background: #f9f9f9; border: 1px solid #c1c1c1; border-radius: 3px;"}
+                %textarea#g-recaptcha-response.g-recaptcha-response{:name => "g-recaptcha-response", :style => "width: 250px; height: 40px; border: 1px solid #c1c1c1;\r\n                  margin: 10px 25px; padding: 0px; resize: none;", :value => ""}
+        .nl-SignupForm_buttonArea
+          .nl-SignupForm_button
+            %button 登録する
+          .nl-SignupForm_attention
+            登録には
+            %a{:href => "/terms"}> 利用規約
+            に同意する必要があります。

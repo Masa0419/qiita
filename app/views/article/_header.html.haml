@@ -1,0 +1,94 @@
+%div{"data-hyperapp-app" => "GlobalHeader", "data-hyperapp-mounted" => "true", "data-hyperapp-props" => "{\"unreadNotificationsCount\":0,\"realms\":[{\"humanName\":\"Qiita\",\"isCurrentRealm\":true,\"isQiita\":true,\"isQiitaTeam\":false,\"loggedInUser\":{\"profileImageUrl\":\"https://avatars2.githubusercontent.com/u/22460261?v=4\",\"urlName\":\"Daniel16\"},\"teamId\":null,\"url\":\"https://qiita.com/\"}],\"teamFindUrl\":\"https://teams-center.qiita.com/find_team\",\"isTeamOnlyUser\":false,\"currentUser\":{\"isStaff\":false,\"name\":\"\",\"originalId\":252777,\"profileImageUrl\":\"https://avatars2.githubusercontent.com/u/22460261?v=4\",\"urlName\":\"Daniel16\"}}"}
+  #globalHeader.st-Header
+    .st-Header_container
+      .st-Header_start
+        %a.st-Header_logo.mr-1{:href => "/"}
+          %svg{:viewbox => "0 0 75 25", :xmlns => "http://www.w3.org/2000/svg"}
+            %title Qiita
+            %path{:d => "M24.6 12.2C24.6 6.2 20 0 12.2 0 6.2 0 0 4.6 0 12.4c0 6 4.6 12.2 12.4 12.2 2.5 0 5-.8 7.1-2.3l3.6 3.6 1.6-1.6-3.4-3.4c2.1-2.3 3.3-5.3 3.3-8.7zm-12.4-10c5.7 0 10.2 4.4 10.2 10.1 0 4.9-3.8 10.1-10.1 10.1s-10.1-5.1-10.1-10c0-6.4 5.1-10.2 10-10.2zM30.5 7.1h2.1v17h-2.1zM31.5 4.8c-1 0-1.8-.8-1.8-1.8s.8-1.8 1.8-1.8 1.8.8 1.8 1.8-.8 1.8-1.8 1.8zM40 4.8c-1 0-1.8-.8-1.8-1.8S39 1.2 40 1.2s1.8.8 1.8 1.8S41 4.8 40 4.8zM39 7.1h2.1v17H39zM53.7 24.4c-3.9 0-6.2-3-6.2-6v-16h2.1v4.7H57v2.1h-7.4v9.3c0 1.9 1.5 3.9 4.1 3.9.7 0 1.4-.2 2-.6l.2-.1 1 1.8-.2.1c-.9.5-2 .8-3 .8zM67.6 24.5c-5.7 0-9.1-4.5-9.1-8.9 0-5.7 4.5-9.1 8.9-9.1 2.3 0 4.1.8 5.4 2.3V7.1h2.1v17h-2.1v-1.9c-1.2 1.5-3 2.3-5.2 2.3zm-.2-15.9c-3.4 0-6.8 2.6-6.8 7 0 3.4 2.6 6.8 7 6.8 2 0 4-.9 5.3-2.5v-8.8c-1.4-1.6-3.3-2.5-5.5-2.5z"}
+        %div
+          .st-Header_realmSelector{:tabindex => "0"}
+            %span.fa.fa-fw.fa-caret-down
+          .st-Header_dropdown.st-RealmSelector
+            .st-RealmSelector_realms
+              %a.st-Header_dropdownItem.st-RealmItem{:href => "https://qiita.com/"}
+                .st-RealmItem_statusIcon
+                  %span.fa.fa-fw.fa-check
+                .st-RealmItem_humanName Qiita
+            %hr/
+            .st-RealmSelector_supplements
+              .st-RealmSelector_label ログイン中のチームがありません
+              %a.st-Header_dropdownItem.st-RealmSelectorSupplement{:href => "https://teams-center.qiita.com/find_team"}
+                .st-RealmSelectorSupplement_icon
+                  %span.fa.fa-fw.fa-sign-in
+                %div Qiita:Team にログイン...
+        %div
+          .st-Header_home{:tabindex => "0"}
+            ホーム
+            %span.fa.fa-fw.fa-caret-down.ml-1of2
+          .st-Header_dropdown
+            %a.st-Header_dropdownItem{:href => "/"}
+              %span.fa.fa-fw.fa-line-chart.mr-1of2>
+              トレンド
+            %a.st-Header_dropdownItem{:href => "/timeline"}
+              %span.fa.fa-fw.fa-list-ul.mr-1of2>
+              タイムライン
+            %a.st-Header_dropdownItem{:href => "/tag-feed"}
+              %span.fa.fa-fw.fa-tags.mr-1of2>
+              タグフィード
+        %div
+          .st-Header_community{:tabindex => "0"}
+            コミュニティ
+            %span.fa.fa-fw.fa-caret-down.ml-1of2
+          .st-Header_dropdown
+            %a.st-Header_dropdownItem{:href => "/users"}
+              %span.fa.fa-fw.fa-users.mr-1of2>
+              ユーザー一覧
+            %a.st-Header_dropdownItem{:href => "/organizations"}
+              %span.fa.fa-fw.fa-building-o.mr-1of2>
+              Organization一覧
+            %a.st-Header_dropdownItem{:href => "/advent-calendar"}
+              %span.fa.fa-fw.fa-calendar.mr-1of2>
+              アドベントカレンダー
+            .st-Header_dropdownSeparator
+            %a.st-Header_dropdownItem{:href => "https://qiitadon.com/", :target => "_blank"}
+              %span.fa.fa-fw.fa-comments-o.mr-1of2>
+              Qiitadon (β)
+            .st-Header_dropdownSeparator
+            %a.st-Header_dropdownItem{:href => "http://help.qiita.com/ja/articles/qiita-community-guideline", :target => "_blank"}
+              %span.fa.fa-fw.fa-book.mr-1of2>
+              コミュニティガイドライン
+            %a.st-Header_dropdownItem{:href => "http://help.qiita.com/ja/articles/qiita-article-guideline", :target => "_blank"}
+              %span.fa.fa-fw.fa-book.mr-1of2>
+              良い記事を書くために
+        %form.st-Header_search{:action => "/search", :method => "get"}
+          %span.fa.fa-search
+          %input.st-Header_searchInput{:autocomplete => "off", :name => "q", :placeholder => "キーワードを入力", :required => "", :type => "search"}/
+        .st-Header_searchButton
+          %span.fa.fa-search
+      .st-Header_end
+        %a.st-Header_stock.mr-2.py-2{:href => "/stock"}
+          %span.fa.fa-fw.fa-folder-open.mr-1of2
+          %span.st-Header_stock-label ストック一覧
+        %a.st-Header_postButton.mr-2.px-2{:href => "/drafts/new"}
+          %span.fa.fa-fw.fa-pencil-square-o.mr-1>
+          投稿する
+        .u-relative
+          .st-Header_notifications{:tabindex => "0"} 0
+        .u-relative
+          .st-Header_loginUser{:tabindex => "0"}
+            %img{:alt => "Daniel16", :src => "https://avatars2.githubusercontent.com/u/22460261?v=4"}/
+            %span.fa.fa-fw.fa-caret-down.ml-1
+          .st-Header_dropdown
+            %a.st-Header_dropdownItem{:href => "/Daniel16"} マイページ
+            .st-Header_dropdownSeparator
+            %a.st-Header_dropdownItem{:href => "/drafts"} 下書き一覧
+            %a.st-Header_dropdownItem{:href => "/patches"} 編集リクエスト一覧
+            .st-Header_dropdownSeparator
+            %a.st-Header_dropdownItem{:href => "/settings"} 設定
+            %a.st-Header_dropdownItem{:href => "http://help.qiita.com/ja/categories/qiita/", :target => "_blank"} ヘルプ
+            .st-Header_dropdownSeparator
+            .st-Header_dropdownItem{:tabindex => "0"} ログアウト
+      .st-Header_overlay
+      %form.st-Header_searchModal{:action => "/search", :method => "get"}
+        %input.st-Header_searchModalInput{:autocomplete => "off", :name => "q", :placeholder => "キーワードを入力", :required => "", :type => "text"}/

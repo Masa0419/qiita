@@ -1,0 +1,43 @@
+.nl-Hero
+  .nl-Hero_inner
+    .nl-Hero_start
+      %h1.mb-3.nl-Hero_title Hello hackers !
+      %p.nl-Hero_lead Qiitaは、エンジニアリングに関する知識を記録・共有するためのサービスです。コードを書いていて気づいたことや、自分がハマったあの仕様について、他のエンジニアと知見を共有しましょう ;)
+    .nl-Hero_end
+      .nl-SocialSignupWrapper
+        %a.nl-SocialSignup.nl-SocialSignup-github{:href => "https://oauth.qiita.com/auth/github?callback_action=login_or_signup&realm=qiita"}
+          %span.fa.fa-github>
+          GitHub
+        %a.nl-SocialSignup.nl-SocialSignup-twitter{:href => "https://oauth.qiita.com/auth/twitter?callback_action=login_or_signup&realm=qiita"}
+          %span.fa.fa-twitter>
+          Twitter
+        %a.nl-SocialSignup.nl-SocialSignup-google{:href => "https://oauth.qiita.com/auth/google?callback_action=login_or_signup&realm=qiita"}
+          %span.fa.fa-google>
+          Google
+      .nl-Hero_separator OR
+      %form.nl-SignupForm{"accept-charset" => "UTF-8", :action => "/registration", :method => "post"}
+        %input{:name => "utf8", :type => "hidden", :value => "✓"}/
+        %input{:name => "authenticity_token", :type => "hidden", :value => "+BxXI5CnRYSsnkyPiVlBJ9Z/9RkwggykbCGEQEu2njs+96B0StlI6BT2em6q0CxJ3MBt+xuU7SnqWzYXMwo87Q=="}/
+      = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+        = devise_error_messages!
+        .mb-2.nl-SignupForm_group
+          %label.nl-SignupForm_label ユーザー名
+          = f.email_field :email, autofocus: true, placeholder: "qiitan"
+        .field
+          %label.nl-SignupForm_label メールアドレス
+          = f.email_field :email, autofocus: true, autocomplete: "email",:placeholder => "qiitan@qiita.com", :type => "email"
+        .field
+          %label.nl-SignupForm_labeld パスワード
+          - if @minimum_password_length
+            %em
+          = f.password_field :password, autocomplete: "new-password",placeholder: "********"
+        %span.mb-2.nl-SignupForm_helpText 8文字以上、英・数・記号が使えます
+        .nl-SignupForm_buttonArea
+          .nl-SignupForm_button
+        .actions
+          = f.submit "登録する"
+        .nl-SignupForm_attention
+          登録には
+          %a{:href => "/terms"}> 利用規約
+          に同意する必要があります。
+      = render "devise/shared/links"

@@ -1,0 +1,111 @@
+.st-Header{
+padding-right: 8px;
+padding-left: 8px;
+background-color: #55c500;
+color: #fff;
+  .st-Header_container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 56px;
+    max-width: 1100px;
+    margin-right:auto;
+    margin-left: auto;
+    .st-Header_start{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      .st-Header_logo{
+        display: flex;
+        align-items: center;
+      }
+      .mr-1{
+        margin-right: 8px;
+      }
+      .st-Header_realmSelector{
+        padding: 2px;
+        border-radius: 3px;
+        color: #eee;
+        font-size: 1.2rem;
+        cursor: pointer;
+        margin-left:4px;
+        outline: none;
+        .fa{
+          display: inline-block;
+          font:normal normal normal 14px/1 FontAwesome;
+          font-size: inherit;
+          text-rendering: auto;
+          -webkit-font-smoothing:antialiased;
+        }
+        .fa-fw{
+          width:1.28571em;
+          text-align: center;
+        }
+      }
+      .st-Header_dropdown{
+        display: inherit;
+      }
+      .st-Header_search{
+        display: none;
+        position: relative;
+        width: 200px;
+        .st-Header_searchInput{
+          width: 100%;
+          height: 32px;
+          border: none;
+          border-radius: 4px;
+          background-color: #fff;
+          font-size:1.2rem;
+          box-shadow: insert 0 1px 2px #ccc;
+          padding-left: 32px;
+          padding-right: 8px;
+          -webkit-appearance: textfield;
+        }
+      }
+      .st-Header_searchButton{
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        width: 40px;
+        height: 100%;
+        color: #fff;
+      }
+    }
+    .st-Header_end{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .st-Header_signupButton{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 32px;
+        color: #fff;
+        border-radius: 4px;
+        border: 2px solid#fff;
+        font-size: 1.2rem;
+        user-select: none;
+        padding: 0 16px;
+        margin-right: 16px;
+        z-index:1;
+      }
+      a{
+        text-decoration: none;
+      }
+      .st-Header_loginLink{
+        font-size: 1.2rem;
+        color: #fff;
+        cursor: pointer;
+      }
+    }
+    .st-Header_overlay{
+      display: none;
+    }
+    .st-Header_searchModal{
+      display: none;
+    }
+  }
+}
